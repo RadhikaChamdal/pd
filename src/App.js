@@ -14,8 +14,11 @@ function main() {
   return (
 
     <div>
+  {/*Calling the function from below into the function State and Counter */}
       <State />
+      <hr />
       <Counter />
+      <hr />
       <PeopleInfo
         name="Radhika"
         age="20"
@@ -32,11 +35,14 @@ function main() {
           console.log("hi");
         }}
       />
-      
+      <hr />
+      <Person name = "Radhika"/>
+      <hr />
+    
+  </div>
 
 
 
-    </div>
   );
   function PeopleInfo(props) {
     return (
@@ -51,6 +57,8 @@ function main() {
     );
   }
 }
+
+
 // using state, to then create a counter 
 function Counter () {
   const[count, setCount] = React.useState(0);
@@ -61,9 +69,28 @@ function Counter () {
       <button onClick ={()=>{setCount(count+1)}} />
      
       <button onClick ={()=>{setCount(count-1)}} />
+      
       </div>
     )  
   }
+  
+// Creating a reusable component using state management 
+  function Person (props) {
+    const [currentName, setCurrentName] = React.useState(props.name);
+    return (
+      // Once user clicks on the name, name will change to Chamdal
+      <div onClick = {() => {
+        setCurrentName("Chamdal")
+        
+      }}>
+        <p> Name = {currentName}</p>
+        
+ 
+
+    </div>
+    
+        )
+}
   
  
 

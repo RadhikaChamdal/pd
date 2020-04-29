@@ -4,7 +4,7 @@ function State() {
 // In the array message is the variable and is the part which the user see's. setMessage is the function which changes the variable.
 // After the React.useState, this may change depending if the output is an array, string/empty string or integer.
   const [message, setMessage] = React.useState("");
-//   const [error, setError] = React.useState("")
+  const [error, setError] = React.useState("");
   return (
     <div>
       <h1>{message}</h1>
@@ -18,17 +18,17 @@ function State() {
       <button
       onClick = {() => {
           setMessage("Click");
-        //   setError ("")
+          setError ("")
 
       }}
       >
     Reset 
       </button>
-    
+        <p>{error}</p>
       <button 
       onClick = {()=> {
      setMessage("You are not going to get through")
-    //  setError ("Problem")
+     setError ("Problem")
 
         }}>
         Click me  
