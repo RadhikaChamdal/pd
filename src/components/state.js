@@ -1,8 +1,8 @@
 import React from "react";
 
 function State() {
-// In the array message is the variable and is the part which the user see's. setMessage is the function which changes the variable.
-// After the React.useState, this may change depending if the output is an array, string/empty string or integer.
+  // In the array message is the variable and is the part which the user see's. setMessage is the function which changes the variable.
+  // After the React.useState, this may change depending if the output is an array, string/empty string or integer.
   const [message, setMessage] = React.useState("");
   const [error, setError] = React.useState("");
   return (
@@ -16,22 +16,21 @@ function State() {
         Button
       </button>
       <button
-      onClick = {() => {
+        onClick={() => {
           setMessage("Click");
-          setError ("")
-
-      }}
+          setError("");
+        }}
       >
-    Reset 
+        Reset
       </button>
-        <p>{error}</p>
-      <button 
-      onClick = {()=> {
-     setMessage("You are not going to get through")
-     setError ("Problem")
-
-        }}>
-        Click me  
+      <p>{error}</p>
+      <button
+        onClick={() => {
+          setMessage("You are not going to get through");
+          setError("Problem");
+        }}
+      >
+        Click me
       </button>
     </div>
   );

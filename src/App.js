@@ -4,17 +4,14 @@ import State from "./components/state";
 
 // creating reusuable components
 
-
-
 function main() {
- //another way of doing an onClick but using const as a function
+  //another way of doing an onClick but using const as a function
   const radhikaClicked = () => {
     console.log("Radhika Clicked");
   };
   return (
-
     <div>
-  {/*Calling the function from below into the function State and Counter */}
+      {/*Calling the function from below into the function State and Counter */}
       <State />
       <hr />
       <Counter />
@@ -36,13 +33,10 @@ function main() {
         }}
       />
       <hr />
-      <Person name = "Radhika"/>
+      {/* Calling the function from below on reusable components and state */}
+      <Person name="Radhika" />
       <hr />
-    
-  </div>
-
-
-
+    </div>
   );
   function PeopleInfo(props) {
     return (
@@ -58,43 +52,49 @@ function main() {
   }
 }
 
+// using state, to then create a counter
+function Counter() {
+  const [count, setCount] = React.useState(0);
 
-// using state, to then create a counter 
-function Counter () {
-  const[count, setCount] = React.useState(0);
-    
-    return(
-      <div className = "button">
-      <p><b>Your Points:</b> {count}</p>
-      <button onClick ={()=>{setCount(count+1)}} />
-     
-      <button onClick ={()=>{setCount(count-1)}} />
-      
-      </div>
-    )  
-  }
-  
-// Creating a reusable component using state management 
-  function Person (props) {
-    const [currentName, setCurrentName] = React.useState(props.name);
-    return (
-      // Once user clicks on the name, name will change to Chamdal
-      <div onClick = {() => {
-        setCurrentName("Chamdal")
-        
-      }}>
-        <p> Name = {currentName}</p>
-        
- 
+  return (
+    <div className="button">
+      <p>
+        <b>Your Points:</b> {count}
+      </p>
+      <button
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >
+        {" "}
+        Correct{" "}
+      </button>
 
+      <button
+        onClick={() => {
+          setCount(count - 1);
+        }}
+      >
+        {/* {" "} */}
+        Incorrect{" "}
+      </button>
     </div>
-    
-        )
+  );
 }
-  
- 
 
-
-// onClicks functions
+// Creating a reusable component using state management
+function Person(props) {
+  const [currentName, setCurrentName] = React.useState(props.name);
+  return (
+    // Once user clicks on the name, name will change to Chamdal
+    <div
+      onClick={() => {
+        setCurrentName("Chamdal");
+      }}
+    >
+      <p> Name = {currentName}</p>
+    </div>
+  );
+}
 
 export default main;
