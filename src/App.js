@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import State from "./components/state";
+import Input from './components/input';
 
 // creating reusuable components
 
@@ -36,7 +37,12 @@ function main() {
       {/* Calling the function from below on reusable components and state */}
       <Person name="Radhika" />
       <hr />
+    <Input />
+    
+    
     </div>
+
+
   );
   function PeopleInfo(props) {
     return (
