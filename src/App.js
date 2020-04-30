@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import State from "./components/state";
 import Input from './components/input';
+import Shopping from './components/map';
 
 // creating reusuable components
 
@@ -38,6 +39,9 @@ function main() {
       <Person name="Radhika" />
       <hr />
     <Input />
+    <br />
+    <br />
+    <Shopping />
     
     
     </div>
