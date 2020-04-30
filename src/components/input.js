@@ -1,6 +1,6 @@
 import React from "react";
 
-
+// 2 way input binding using state 
 function Input(){
 // when using state, need to think of what the state would be showing.
 // what is it doing, right now we are using password, and setPassword as this is what we want the state to represent.
