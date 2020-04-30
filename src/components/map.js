@@ -7,6 +7,16 @@ function Shopping() {
     "eggs",
     "beans",
   ]);
+
+// used map function to change the whole array, you isolate the string or whatever in a 
+// seperate function then use the map function with another function to then display a change.
+  const putinLi = (string) => {
+      return <li>{string}</li>
+  }
+
+const List = shoppingList.map(putinLi)
+
+  
 const handleClick = () => {
     setAddItem("")
     // [...]is the spread operator, copies the existing array and adds the new input.
@@ -27,6 +37,9 @@ const handleClick = () => {
       <button onClick={handleClick}> Add to list </button>
       <hr />
       <p>In my list:{shoppingList.join(" ,")}</p>
+      <ol>
+          {List}
+        </ol>
     </div>
   );
 }
