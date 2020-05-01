@@ -26,6 +26,7 @@ function Effect() {
   }, []);
   React.useEffect(() => {
     console.log("Radhika");
+    // Radhika would be logged when you press either button 1 or button 2 as its included in the array
   }, [stateOne, stateTwo]);
 
   return (
