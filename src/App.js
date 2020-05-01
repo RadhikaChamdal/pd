@@ -3,6 +3,7 @@ import "./App.css";
 import State from "./components/state";
 import Input from './components/input';
 import Shopping from './components/map';
+import Effect from './components/useEffect';
 
 // creating reusuable components
 
@@ -42,7 +43,8 @@ function main() {
     <br />
     <br />
     <Shopping />
-    
+    <br />
+    <Effect />
     
     </div>
 
