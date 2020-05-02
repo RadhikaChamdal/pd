@@ -4,6 +4,7 @@ import State from "./components/state";
 import Input from './components/input';
 import Shopping from './components/map';
 import Effect from './components/useEffect';
+import API from './components/api';
 
 // creating reusuable components
 
@@ -45,6 +46,8 @@ function main() {
     <Shopping />
     <br />
     <Effect />
+    <br />
+    <API />
     
     </div>
 
