@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
 import State from "./components/state";
-import Input from './components/input';
-import Shopping from './components/map';
-import Effect from './components/useEffect';
-import API from './components/api';
+import Input from "./components/input";
+import Shopping from "./components/map";
+import Effect from "./components/useEffect";
+import API from "./components/api";
+// import APIS from './components/api2';
 
 // creating reusuable components
 
@@ -40,18 +41,16 @@ function main() {
       {/* Calling the function from below on reusable components and state */}
       <Person name="Radhika" />
       <hr />
-    <Input />
-    <br />
-    <br />
-    <Shopping />
-    <br />
-    <Effect />
-    <br />
-    <API />
-    
+      <Input />
+      <br />
+      <br />
+      <Shopping />
+      <br />
+      <Effect />
+      <br />
+      <API />
+      {/* <APIS /> */}
     </div>
-
-
   );
   function PeopleInfo(props) {
     return (
